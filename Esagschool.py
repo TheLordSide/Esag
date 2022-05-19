@@ -137,7 +137,7 @@ def connexion():
             if requete:
                 requete2 = Compte.query.filter(Compte.email==emailuser , Compte.motDepasse==password, Compte.confirmed==True).all() 
                 if requete2:
-                    return  redirect(url_for('dashboarduser', email=emailuser))
+                    return  redirect(url_for('dashbord', email=emailuser))
                 else:
                     if not requete2:
                         flash("Votre compte n'est pas confirmé, veuillez confirmer dans votre email")
@@ -342,7 +342,22 @@ def procedure_admission_checkuserlogged():
 
 @Esagschool.route('/procedure_admission', methods=['GET'])
 def procedure_admission():
-    return render_template(procedure_admission.html)
+    return render_template('procedureadmission.html')
+
+
+##########################################################################################################################################################
+#
+#
+#
+#Dashboard etudiant
+#
+#
+#
+##########################################################################################################################################################
+
+@Esagschool.route('/dashbord', methods=['GET'])
+def dashbord():
+    return render_template('dashbord.html')
      
 
 
