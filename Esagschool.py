@@ -1,3 +1,4 @@
+from cgitb import html
 import datetime
 from flask import Flask, flash, redirect, render_template, request, jsonify, session, url_for
 from flask_sqlalchemy import SQLAlchemy
@@ -315,7 +316,25 @@ def conditions_admission():
 #
 #
 #
-#Procedure admission
+#check logged user for admission
+#
+#
+#
+##########################################################################################################################################################
+
+@Esagschool.route('/procedure_admission_checkuserlogged', methods=['GET'])
+def procedure_admission_checkuserlogged():
+     if "usermail" in session:
+         return redirect(url_for('conditions_admission'))
+     else:
+         return redirect(url_for('connexion'))
+     
+     
+##########################################################################################################################################################
+#
+#
+#
+#check logged user for admission
 #
 #
 #
@@ -323,7 +342,8 @@ def conditions_admission():
 
 @Esagschool.route('/procedure_admission', methods=['GET'])
 def procedure_admission():
-    return render_template('procedureadmission.html')
+    return render_template(procedure_admission.html)
+     
 
 
 

@@ -109,7 +109,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Procédures<span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="{{url_for('procedure_admission')}}">admission</a></li>                
+                <li><a href="{{url_for('procedure_admission_checkuserlogged')}}">admission</a></li>                
                 <li><a href="course-detail.html">inscription</a></li>                
               </ul>
             </li>           
@@ -229,7 +229,6 @@
             <!-- Start Title -->
             <div class="mu-title">
               <h2>Notre force</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ipsa ea maxime mollitia, vitae voluptates, quod at, saepe reprehenderit totam aliquam architecto fugiat sunt animi!</p>
             </div>
             <!-- End Title -->
             <!-- Start features content -->
@@ -238,49 +237,37 @@
                 <div class="col-lg-4 col-md-4  col-sm-6">
                   <div class="mu-single-feature">
                     <span class="fa fa-book"></span>
-                    <h4>Professional Courses</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                    <a href="#">Read More</a>
+                    <h4>Des formations professionnelles</h4>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="mu-single-feature">
                     <span class="fa fa-users"></span>
                     <h4>Des professeurs qualifiés</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                    <a href="#">Read More</a>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="mu-single-feature">
                     <span class="fa fa-laptop"></span>
                     <h4>Un outil d'apprentissage en ligne</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                    <a href="#">Read More</a>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="mu-single-feature">
                     <span class="fa fa-microphone"></span>
                     <h4>Des cours audios</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                    <a href="#">Read More</a>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="mu-single-feature">
                     <span class="fa fa-film"></span>
                     <h4>Des cours vidéos</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                    <a href="#">Read More</a>
                   </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6">
                   <div class="mu-single-feature">
                     <span class="fa fa-certificate"></span>
-                    <h4>Des professionnels qualifiés</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus non dolorem excepturi libero itaque sint labore similique maxime natus eum.</p>
-                    <a href="#">Read More</a>
+                    <h4>Un personnel administratif compétant</h4>
                   </div>
                 </div>
               </div>
@@ -371,7 +358,7 @@
             <!-- begain title -->
             <div class="mu-title">
               <h2>Le personnel administratif</h2>
-
+              <p>Le corps administratif de l’ESAG-NDE est composé de personnels tel que des professeurs, des représentants de filière, des sécrétaires, des assistants et de la directrice génerale.</p>
             </div>
             <!-- end title -->
             <!-- begain our teacher content -->
@@ -380,7 +367,7 @@
                 <div class="col-lg-3 col-md-3  col-sm-6">
                   <div class="mu-our-teacher-single">
                     <figure class="mu-our-teacher-img">
-                      <img src="static/assets/img/teachers/teacher-01.png" alt="teacher img">
+                      <img src="static/assets/img/teachers/dg.png" alt="teacher img">
                       <div class="mu-our-teacher-social">
                         <a href="#"><span class="fa fa-facebook"></span></a>
                         <a href="#"><span class="fa fa-twitter"></span></a>
@@ -389,16 +376,15 @@
                       </div>
                     </figure>                    
                     <div class="mu-ourteacher-single-content">
-                      <h4>Brian Dean</h4>
-                      <span>Math Teacher</span>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quod pariatur recusandae odio dignissimos. Eligendi.</p>
+                      <h4>Docteur Soeur ASSIVON Louise de Jesus</h4>
+                      <span>Directrice Génerale</span>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6">
                   <div class="mu-our-teacher-single">
                     <figure class="mu-our-teacher-img">
-                      <img src="static/assets/img/teachers/teacher-01.png" alt="teacher img">
+                      <img src="static/assets/img/teachers/DGS.jpg" alt="teacher img">
                       <div class="mu-our-teacher-social">
                         <a href="#"><span class="fa fa-facebook"></span></a>
                         <a href="#"><span class="fa fa-twitter"></span></a>
@@ -407,9 +393,25 @@
                       </div>
                     </figure>                    
                     <div class="mu-ourteacher-single-content">
-                      <h4>James Hein</h4>
-                      <span>Physics Teacher</span>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quod pariatur recusandae odio dignissimos. Eligendi.</p>
+                      <h4>Pr. AGBODJI Akoété Ega Damien</h4>
+                      <span>Président du Conseil Scientifique</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                  <div class="mu-our-teacher-single">
+                    <figure class="mu-our-teacher-img">
+                      <img src="static/assets/img/teachers/AMOUZOU.png" alt="teacher img">
+                      <div class="mu-our-teacher-social">
+                        <a href="#"><span class="fa fa-facebook"></span></a>
+                        <a href="#"><span class="fa fa-twitter"></span></a>
+                        <a href="#"><span class="fa fa-linkedin"></span></a>
+                        <a href="#"><span class="fa fa-google-plus"></span></a>
+                      </div>
+                    </figure>                    
+                    <div class="mu-ourteacher-single-content">
+                      <h4>Expert Compt. AMOUZOU Koffi Abalo</h4>
+                      <span>Membre</span>
                     </div>
                   </div>
                 </div>
@@ -425,27 +427,8 @@
                       </div>
                     </figure>                    
                     <div class="mu-ourteacher-single-content">
-                      <h4>Rebeca Michel</h4>
-                      <span>English Teacher</span>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quod pariatur recusandae odio dignissimos. Eligendi.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                  <div class="mu-our-teacher-single">
-                    <figure class="mu-our-teacher-img">
-                      <img src="static/assets/img/teachers/teacher-01.jpg" alt="teacher img">
-                      <div class="mu-our-teacher-social">
-                        <a href="#"><span class="fa fa-facebook"></span></a>
-                        <a href="#"><span class="fa fa-twitter"></span></a>
-                        <a href="#"><span class="fa fa-linkedin"></span></a>
-                        <a href="#"><span class="fa fa-google-plus"></span></a>
-                      </div>
-                    </figure>                    
-                    <div class="mu-ourteacher-single-content">
-                      <h4>John Doe</h4>
-                      <span>Biology Teacher</span>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quod pariatur recusandae odio dignissimos. Eligendi.</p>
+                      <h4>Dr. JOHNSON Marie-Gonzaga</h4>
+                      <span>Membre</span>
                     </div>
                   </div>
                 </div>
