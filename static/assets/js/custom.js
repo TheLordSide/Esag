@@ -67,10 +67,9 @@ jQuery(function($){
       dots: false,
       infinite: true,
       slidesToShow:1,
-      autoplaySpeed:1000,
+      autoplaySpeed:3000,
       arrows: true,
-      speed: 500,
-   
+      speed: 3000,
       autoplay: true,      
       cssEase: 'linear',
       clear: true,

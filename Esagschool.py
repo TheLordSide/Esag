@@ -17,10 +17,9 @@ policy = PasswordPolicy.from_names(
     numbers=1,  # need min. 2 digits
     strength=0.66 # need a password that scores at least 0.5 with its entropy bits
 )
-motdepasse=quote_plus('moise@12345')
+#motdepasse=quote_plus('moise@12345')
 
-Esagschool.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:{}@localhost:5432/CampusEsag'.format(motdepasse)
-Esagschool.config['SECRET_KEY']='MaCle'
+Esagschool.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:010296@localhost:5432/CampusEsag'
 Esagschool.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
