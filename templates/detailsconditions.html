@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Portail ESAG-NDE Condition d'admission</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="static/assets/img/gt_favicon.png" type="image/x-icon">
+
+    <!-- Font awesome -->
+    <link href="static/assets/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="static/assets/css/bootstrap.css" rel="stylesheet">   
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="static/assets/css/slick.css">          
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="static/assets/css/jquery.fancybox.css" type="text/css" media="screen" /> 
+    <!-- Theme color -->
+    <link id="switcher" href="static/assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+    <!-- Main style sheet -->
+    <link href="static/assets/css/style.css" rel="stylesheet">    
+
+   
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,300italic,500,700' rel='stylesheet' type='text/css'>
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <a class="scrollToTop" href="#">
+      <i class="fa fa-angle-up"></i>      
+    </a>
+  <!-- END SCROLL TOP BUTTON -->
+
+  <!-- Start header  -->
+  <header id="mu-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="mu-header-area">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="mu-header-top-left">
+                  <div class="mu-top-email">
+                    <i class="fa fa-envelope"></i>
+                    <span>esagnde@esag-itnde.org</span>
+                  </div>
+                  <div class="mu-top-phone">
+                    <i class="fa fa-phone"></i>
+                    <span>+228 22 21 68 58</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="mu-header-top-right">
+                  <nav>
+                    <ul class="mu-top-social-nav">
+                      <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                      <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                      <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                      <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                      <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header  -->
+  <!-- Start menu -->
+  <section id="mu-menu">
+    <nav class="navbar navbar-default" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->              
+          <!-- TEXT BASED LOGO -->
+          <a class="navbar-brand" href="{{url_for('index')}}"><i class="fa fa-university"></i><span>Portail ESAG-NDE</span></a>
+          <!-- IMG BASED LOGO  -->
+          <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+            <li><a href="{{url_for('index')}}">Accueil</a></li>            
+                
+            <li><a href="{{url_for('galerie')}}">Galerie</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log in/Sign up <span class="fa fa-angle-down"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="{{url_for('connexion')}}">Log in</a></li>                
+                <li><a href="{{url_for('nouveau_compte')}}">Sign up</a></li>                
+              </ul>
+            </li>            
+          </ul>                    
+        </div><!--/.nav-collapse -->        
+      </div>     
+    </nav>
+  </section>
+  <!-- End menu -->
+  <!-- Start search box -->
+  <div id="mu-search">
+    <div class="mu-search-area">      
+      <button class="mu-search-close"><span class="fa fa-close"></span></button>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">            
+            <form class="mu-search-form">
+              <input type="search" placeholder="Type Your Keyword(s) & Hit Enter">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End search box -->
+ <!-- Page breadcrumb -->
+ <section id="mu-page-breadcrumb">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-page-breadcrumb-area">
+           <h2>Conditions d'admission</h2>
+           <ol class="breadcrumb">
+            <li><a href="{{url_for('index')}}">Accueil</a></li>            
+            <li class="active">Conditions d'admission</li>
+          </ol>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <!-- End breadcrumb -->
+ <section id="mu-course-content">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="mu-course-content-area">
+            <div class="row">
+              <div class="col-md-9">
+                <!-- start course content container -->
+                <div class="mu-course-container mu-course-details">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="mu-latest-course-single">
+                        <figure class="mu-latest-course-img">
+                          <a href="#"><img src="static/assets/img/courses/1.jpg" alt="img"></a>
+                        </figure>
+                        <div class="mu-latest-course-single-content">
+                          <h2><a href="#">Conditions d'admissions</a></h2>
+                          <h4>Détails du parcours</h4>
+                          <ul>
+                            <li> <span>Parcours: </span> <span>...</span></li>
+                            <li> <span>FIlière: </span> <span>...</span></li>
+                            <li> <span>Total Students</span> <span>...</span></li>
+                            <li> <span>Nombre semestres: </span> <span>...</span></li>
+                            <li> <span>Début semestre</span> <span>...</span></li>
+                          </ul>
+                          <h4>Description du parcours</h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quod nisi quisquam modi dolore, dicta obcaecati architecto quidem ullam quia.</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo est itaque vero porro quasi illo ex consequuntur ad animi commodi, ipsam provident voluptas vel adipisci. Minima repellendus vel est, sequi labore quo ipsa voluptatem officiis ex fuga nemo quas. Eligendi inventore ducimus omnis, maxime, alias accusantium similique minus! Labore facilis qui, sunt, ipsam consectetur minus sapiente saepe numquam magnam quidem.</p>
+                          <h4>Description de la filière</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, placeat, ipsa. Modi sed quibusdam vel autem fugit, eaque, iste. Excepturi fugit dignissimos suscipit dolor perferendis debitis magni sed, quia ab.</p>
+                          </blockquote>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ea consequatur doloremque deleniti error ullam, accusamus vel est alias, sit. Similique voluptas aliquid, excepturi accusamus, sequi ducimus incidunt mollitia non.</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi saepe possimus doloribus quod quibusdam officia suscipit qui illum nemo itaque, porro ipsam tempore enim error eius quia, culpa. Reprehenderit consequuntur voluptatem dolorum magni natus inventore molestias veritatis eos aspernatur repudiandae.</p>
+                          <h4>Documents à fournir</h4>
+                        </div>
+                      </div> 
+                    </div>                                   
+                  </div>
+                </div>
+                <!-- end course content container -->
+                <!-- start related course item -->
+                
+                <!-- end start related course item -->
+              </div>
+              <div class="col-md-3">
+                <!-- start sidebar -->
+                <aside class="mu-sidebar">
+                  <!-- start single sidebar -->
+                  <!-- end single sidebar -->
+                  <!-- start single sidebar -->
+                  <div class="mu-single-sidebar">
+                    <h3>Je suis partant</h3>
+                    <div class="mu-sidebar-popular-courses">
+                      <div class="media">
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#" class="btn btn-info" type="button">Soumettre une demande</a></h4>                      
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end single sidebar -->
+                  <!-- start single sidebar -->
+                
+                  <!-- end single sidebar -->
+                  <!-- start single sidebar -->
+      
+                  <!-- end single sidebar -->
+                </aside>
+                <!-- / end sidebar -->
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+  <!-- Start footer -->
+  <footer id="mu-footer">
+    <!-- start footer top -->
+    <div class="mu-footer-top">
+      <div class="container">
+        <div class="mu-footer-top-area">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="mu-footer-widget">
+                <h4>Information</h4>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="">Features</a></li>
+                  <li><a href="">Course</a></li>
+                  <li><a href="">Event</a></li>
+                  <li><a href="">Sitemap</a></li>
+                  <li><a href="">Term Of Use</a></li>
+                </ul>
+              </div>
+            </div>
+          
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="mu-footer-widget">
+                <h4>Contact</h4>
+                <address>
+                  <p>BP: 8019 Tokoin séminaire dans l’enceinte du CESAL</p>
+                  <p>Avepozo Baguida</p>
+                  <p>Telephone: +228 22 21 68 58</p>
+                  <p>esagnde@esag-itnde.org</p>
+                  <p>Lomé-Togo</p>
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer top -->
+    <!-- start footer bottom -->
+    <div class="mu-footer-bottom">
+      <div class="container">
+        <div class="mu-footer-bottom-area">
+          <p>&copy; All Right Reserved. Designed by <a href="http://www.markups.io/" rel="nofollow">MarkUps.io</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- end footer bottom -->
+  </footer>
+  <!-- End footer -->
+
+
+
+
+
+  
+  <!-- jQuery library -->
+  <script src="static/assets/js/jquery.min.js"></script>  
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="static/assets/js/bootstrap.js"></script>   
+  <!-- Slick slider -->
+  <script type="text/javascript" src="static/assets/js/slick.js"></script>
+  <!-- Counter -->
+  <script type="text/javascript" src="static/assets/js/waypoints.js"></script>
+  <script type="text/javascript" src="static/assets/js/jquery.counterup.js"></script>  
+  <!-- Mixit slider -->
+  <script type="text/javascript" src="static/assets/js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->        
+  <script type="text/javascript" src="static/assets/js/jquery.fancybox.pack.js"></script>
+
+  <!-- Custom js -->
+  <script src="static/assets/js/custom.js"></script> 
+
+  </body>
+</html>
