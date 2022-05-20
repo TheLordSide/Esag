@@ -357,6 +357,22 @@ def procedure_admission():
 @Esagschool.route('/dashbord', methods=['GET'])
 def dashbord():
     return render_template('dashbord.html')
+
+
+
+##########################################################################################################################################################
+#
+#
+#
+#demande admission
+#
+#
+#
+##########################################################################################################################################################
+
+@Esagschool.route('/demande_admission', methods=['GET'])
+def demande_admission():
+    return render_template('dashbord.html')
      
 
 
