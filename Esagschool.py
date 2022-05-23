@@ -20,6 +20,7 @@ policy = PasswordPolicy.from_names(
 #motdepasse=quote_plus('moise@12345')
 
 Esagschool.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:010296@localhost:5432/CampusEsag'
+Esagschool.config['SECRET_KEY']='MaCle'
 Esagschool.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
@@ -356,7 +357,7 @@ def procedure_admission():
 
 @Esagschool.route('/dashbord', methods=['GET'])
 def dashbord():
-    return render_template('dashbord.html')
+    return render_template('pages/index.html')
 
 
 ##########################################################################################################################################################
