@@ -107,8 +107,8 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Procédures <span class="fa fa-angle-down"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="course.html">admission</a></li>                
-                <li><a href="course-detail.html">inscription</a></li>                
+                <li><a href="{{url_for('procedure_admission_checkuserlogged')}}">admission</a></li>                
+                <li><a href="{{url_for('procedure_inscription_checkuserlogged')}}">inscription</a></li>                  
               </ul>
             </li>           
             <li class="active"><a href="gallery.html">Galerie</a></li>

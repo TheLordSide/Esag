@@ -330,6 +330,26 @@ def procedure_admission_checkuserlogged():
          return redirect(url_for('connexion'))
      
      
+     
+###########################################################################################################################################################
+#
+#
+#
+#check logged user for inscription
+#
+#
+#
+##########################################################################################################################################################
+ 
+
+@Esagschool.route('/procedure_inscription_checkuserlogged', methods=['GET'])
+def procedure_inscription_checkuserlogged():
+     if "usermail" in session:
+         return redirect(url_for('conditions_admission'))
+     else:
+         return redirect(url_for('connexion'))
+     
+     
 ##########################################################################################################################################################
 #
 #
@@ -357,7 +377,7 @@ def procedure_admission():
 
 @Esagschool.route('/dashbord', methods=['GET'])
 def dashbord():
-    return render_template('pages/index.html')
+    return render_template('dash/index.html')
 
 
 ##########################################################################################################################################################
