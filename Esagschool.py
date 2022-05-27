@@ -391,21 +391,29 @@ def dashbord():
 ##########################################################################################################################################################
 
 
-##########################################################################################################################################################
-#
-#
-#
-#demande admission
-#
-#
-#
-##########################################################################################################################################################
-
 @Esagschool.route('/demande_admission', methods=['GET'])
 def demande_admission():
     return render_template('dashbord.html')
      
 
+#############################################################################################################################################################################
+#
+#
+# Condition d'admission
+#
+#
+#############################################################################################################################################################################
+
+
+
+@Esagschool.route('/conditions_admission', methods=['POST','GET'])
+def retrouverconditions():
+    if request.method=='POST':
+        nomparcours=request.form.get('liste_parcours')
+        listefiliere=request.form.get('liste_filiere')
+        requete2 = Filiere.query.filter_by(LibelleFiliere=listefiliere).first()
+        requete = Parcour.query.filter_by(LibelleParcours=nomparcours).first()
+        return render_template('detailsconditions.html', cond= requete.ConditionAdmissionParcours ,descpar=requete.DescriptionParcours , parccours=nomparcours, listpar=requete,filiere=listefiliere,listfil=requete2)
 
 
 if __name__=="__name__":
