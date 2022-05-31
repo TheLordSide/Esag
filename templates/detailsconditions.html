@@ -173,7 +173,7 @@
                           <a href="#"><img src="static/assets/img/courses/admission.jpg" alt="img"></a>
                         </figure>
                         <div class="mu-latest-course-single-content">
-                          <h2><a href="#">Conditions d'admissions</a></h2>
+                          <h2>Conditions d'admissions</h2>
                           <h4>Détails du parcours</h4>
                           <ul>
                             <li> <span>Parcours: </span> <span>{{parccours}}</span></li>
@@ -183,10 +183,19 @@
                           <p><span>{{descpar}}</span></p>
                           <h4>Condition admission du parcours</h4>
                             <p><span>{{cond}}</span></p>
-                          </blockquote>
                           <p> <span>Remarque: Les etudiants venant d'un autre etablissement seront soumis a une etude de dossier</span></p>
                           <h4>Documents à fournir</h4>
-                          <p></p>
+                          <p>
+                            <li> <span>Deux photos d'identite au format passeport</span></li>
+                            <li> <span>Une copie de l'acte de naissance</span></li>
+                            <li> <span>Une copie de la nationalite</span></li>
+                            <li> <span>Les releves de notes du secondaire ou de la formation universitaire si entamee</span></li>
+                          </p>
+                          <h4>Responsable du parcours</h4>
+                          <p>
+                            <p><span>{{nom}} {{pren}}</span></p>
+                          </p>
+                         
                         </div>
                       </div> 
                     </div>                                   
@@ -208,7 +217,7 @@
                     <div class="mu-sidebar-popular-courses">
                       <div class="media">
                         <div class="media-body">
-                          <h4 class="media-heading"><a href="#" class="btn btn-info" type="button">Soumettre une demande</a></h4>                      
+                          <h4 class="media-heading"><a href="{{url_for('admission_checkuserlogged')}}" class="btn btn-info" type="button">Soumettre une demande</a></h4>                      
                         </div>
                       </div>
                     </div>
@@ -269,13 +278,7 @@
     </div>
     <!-- end footer top -->
     <!-- start footer bottom -->
-    <div class="mu-footer-bottom">
-      <div class="container">
-        <div class="mu-footer-bottom-area">
-          <p>&copy; All Right Reserved. Designed by <a href="http://www.markups.io/" rel="nofollow">MarkUps.io</a></p>
-        </div>
-      </div>
-    </div>
+ 
     <!-- end footer bottom -->
   </footer>
   <!-- End footer -->

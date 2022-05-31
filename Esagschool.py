@@ -292,6 +292,8 @@ def filiere(get_filiere):
         requeteObj['LibelleFiliere'] = FIlieres.LibelleFiliere
         requeteObj['CodeFiliere'] = FIlieres.CodeFiliere
         FiliereArray.append(requeteObj)
+    session['parcours']=get_filiere
+    session['filiere']=FIlieres.CodeFiliere
     return jsonify({'listefiliere' : FiliereArray}) 
 
 
@@ -362,7 +364,7 @@ def procedure_inscription_checkuserlogged():
 
 @Esagschool.route('/procedure_admission', methods=['GET'])
 def procedure_admission():
-    return render_template('procedureadmission.html')
+    return render_template('dash/admission.html')
 
 
 ##########################################################################################################################################################
@@ -393,7 +395,9 @@ def dashbord():
 
 @Esagschool.route('/demande_admission', methods=['GET'])
 def demande_admission():
-    return render_template('dashbord.html')
+    parc= session['parcours']
+    fil=  session['filiere']
+    return render_template('dash/admission.html', parcc=parc,fill=fil)
      
 
 #############################################################################################################################################################################
@@ -413,8 +417,16 @@ def retrouverconditions():
         listefiliere=request.form.get('liste_filiere')
         requete2 = Filiere.query.filter_by(LibelleFiliere=listefiliere).first()
         requete = Parcour.query.filter_by(LibelleParcours=nomparcours).first()
-        return render_template('detailsconditions.html', cond= requete.ConditionAdmissionParcours ,descpar=requete.DescriptionParcours , parccours=nomparcours, listpar=requete,filiere=listefiliere,listfil=requete2)
+        return render_template('detailsconditions.html', pren=requete2.Prenomresponsable, nom=requete2.Nomresponsable, cond= requete.ConditionAdmissionParcours ,descpar=requete.DescriptionParcours , parccours=nomparcours, listpar=requete,filiere=listefiliere,listfil=requete2)
 
+
+
+@Esagschool.route('/admission_checkuserlogged', methods=['GET'])
+def admission_checkuserlogged():
+     if "usermail" in session:
+         return redirect(url_for('demande_admission'))
+     else:
+         return redirect(url_for('connexion'))
 
 if __name__=="__name__":
     Esagschool.run(debug=True)
