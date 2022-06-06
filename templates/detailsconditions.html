@@ -163,14 +163,14 @@
        <div class="col-md-12">
          <div class="mu-course-content-area">
             <div class="row">
-              <div class="col-md-9">
+              <div class="col-md-12">
                 <!-- start course content container -->
                 <div class="mu-course-container mu-course-details">
                   <div class="row">
                     <div class="col-md-12">
                       <div class="mu-latest-course-single">
                         <figure class="mu-latest-course-img">
-                          <a href="#"><img src="static/assets/img/courses/admission.jpg" alt="img"></a>
+                          <a><img src="static/assets/img/courses/admission.jpg" alt="img"></a>
                         </figure>
                         <div class="mu-latest-course-single-content">
                           <h2>Conditions d'admissions</h2>
@@ -195,7 +195,13 @@
                           <p>
                             <p><span>{{nom}} {{pren}}</span></p>
                           </p>
+                          <h2>Je suis partant</h2>
+                          <div>
+                            
+                              <p><a href="{{url_for('admission_checkuserlogged')}}" class="btn btn-info" type="button">Soumettre une demande</a></p>                      
                          
+                          </div>
+
                         </div>
                       </div> 
                     </div>                                   
@@ -212,16 +218,7 @@
                   <!-- start single sidebar -->
                   <!-- end single sidebar -->
                   <!-- start single sidebar -->
-                  <div class="mu-single-sidebar">
-                    <h3>Je suis partant</h3>
-                    <div class="mu-sidebar-popular-courses">
-                      <div class="media">
-                        <div class="media-body">
-                          <h4 class="media-heading"><a href="{{url_for('admission_checkuserlogged')}}" class="btn btn-info" type="button">Soumettre une demande</a></h4>                      
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            
                   <!-- end single sidebar -->
                   <!-- start single sidebar -->
                 
