@@ -1,4 +1,3 @@
-from cgitb import html
 import datetime
 from flask import Flask, flash, redirect, render_template, request, jsonify, session, url_for
 from flask_sqlalchemy import SQLAlchemy
@@ -6,7 +5,7 @@ from flask_mail import Mail, Message
 from itsdangerous import URLSafeTimedSerializer, SignatureExpired
 from password_strength import PasswordPolicy
 from password_strength import PasswordStats
-from urllib.parse import quote_plus
+##from urllib.parse import quote_plus
 
 Esagschool = Flask(__name__)
 mail = Mail(Esagschool)
@@ -156,7 +155,7 @@ def connexion():
 #
 #
 #
-# logout
+##logout
 #
 #
 #
@@ -178,7 +177,7 @@ def logout():
 #
 #
 #
-# Create Account
+##Create Account
 #
 #
 #
@@ -269,8 +268,6 @@ def confirmermail(token):
 @Esagschool.route('/galerie', methods=['GET'])
 def galerie():
     return render_template('gallery.html')
-
-
 
 ##########################################################################################################################################################
 #
@@ -419,6 +416,14 @@ def retrouverconditions():
         requete = Parcour.query.filter_by(LibelleParcours=nomparcours).first()
         return render_template('detailsconditions.html', pren=requete2.Prenomresponsable, nom=requete2.Nomresponsable, cond= requete.ConditionAdmissionParcours ,descpar=requete.DescriptionParcours , parccours=nomparcours, listpar=requete,filiere=listefiliere,listfil=requete2)
 
+
+#############################################################################################################################################################################
+#
+#
+# Condition d'admission
+#
+#
+#############################################################################################################################################################################
 
 
 @Esagschool.route('/admission_checkuserlogged', methods=['GET'])
