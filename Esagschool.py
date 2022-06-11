@@ -52,6 +52,27 @@ class Compte(db.Model):
         self.email=email
         self.confirmed=confirmed
         self.confirmed_on=confirmed_on
+        
+              
+class Demande(db.Model):
+    __tablename__='Demande'
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(), nullable=False)
+    Datedemande = db.Column(db.date(), nullable=False)
+    Parcours = db.Column(db.String(), nullable=False)  
+    Filiere =   db.Column(db.String(), nullable=False)  
+    Nom = db.Column(db.string(), nullable=False)
+    Prenom = db.Column(db.string(), nullable=True)
+    Sexe = db.Column(db.string(), nullable=True)
+    Nationalite = db.Column(db.string(), nullable=True)
+    Datenaissance = db.Column(db.date(), nullable=True)
+    def __init__(self,Datedemande,Parcours,Filiere,Nom,Sexe,Nationalite,Datenaissance,Prenom,email):
+        self.email=email
+        self.Prenom=Prenom
+        self.motDepasse=motDepasse
+        self.email=email
+        self.confirmed=confirmed
+        self.confirmed_on=confirmed_on
 
 class Parcour(db.Model):
     __tablename__='Parcours'
