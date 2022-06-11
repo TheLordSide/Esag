@@ -226,7 +226,7 @@ def nouveau_compte():
 #
 #
 #
-# Confirm mail
+##Confirm mail
 #
 #
 #
@@ -392,13 +392,7 @@ def demande_admission():
     return render_template('dash/admission.html', parcc=parc,fill=fil)
      
 
-#############################################################################################################################################################################
-#
-#
-# Condition d'admission
-#
-#
-#############################################################################################################################################################################
+##########################################################################################################################################################
 
 
 
@@ -412,14 +406,13 @@ def retrouverconditions():
         return render_template('detailsconditions.html', pren=requete2.Prenomresponsable, nom=requete2.Nomresponsable, cond= requete.ConditionAdmissionParcours ,descpar=requete.DescriptionParcours , parccours=nomparcours, listpar=requete,filiere=listefiliere,listfil=requete2)
 
 
-#############################################################################################################################################################################
+###########################################################################################################################################################
 #
 #
 # Condition d'admission
 #
 #
-#############################################################################################################################################################################
-
+###########################################################################################################################################################
 
 @Esagschool.route('/admission_checkuserlogged', methods=['GET'])
 def admission_checkuserlogged():
@@ -427,6 +420,7 @@ def admission_checkuserlogged():
          return redirect(url_for('demande_admission'))
      else:
          return redirect(url_for('connexion'))
+
 
 if __name__=="__name__":
     Esagschool.run(debug=True)
